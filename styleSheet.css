@@ -1,0 +1,308 @@
+/*This removes all the padding and margins from all attributes, They can be reapplied when needed */
+*
+{
+  padding:0;
+  margin:0;
+}
+/*The body tag will have a small background image that will repeat, this is for when the screen is too large*/
+body
+{
+  background-image: url("images/background.png");
+}
+/*All headings will be given the the font Rubik, if it cant have rubik then it will pick a san-serif font*/
+h1, h2, h3
+{
+  font-family: 'Rubik', sans-serif;
+}
+/*All paragraphs and list items will be given the the font Roboto Mono, if it cant have rubik then it will pick a san-serif font*/
+p, li, ul
+{
+  font-family: 'Roboto Mono', monospace;
+}
+/*All links will have the underline removed and be given the font Rubik*/
+a
+{
+  text-decoration:none;
+  font-family: 'Roboto', sans-serif;
+}
+/*The list items will be inwards to make sure they do not move outside their div*/
+ul
+{
+  list-style-position: inside;
+}
+
+/* Classes connected to all html documents */
+/*The wrapping will stretch the whole screen but will not extend over 1920pixels wide, once it goes over that width then it will get centred. The background colour is set to a white-grey*/
+.wrapping
+{
+  height: 100%;
+  width: 100%;
+  max-width:1920px;
+  margin:0 auto;
+  background-color:#F4F4F4;
+}
+/*My name will be floated on the left of the nav bar coloured white-grey. It has a margin of 20px moving it away from the edge*/
+.aaronHardie
+{
+  float: left;
+  margin: 20px;
+  color: #F4F4F4;
+}
+/*Navigation bar spans the whole length of the wrapping div, be 100px high and has the dark blue colour*/
+.navigation
+{
+  height: 100px;
+  width: 100%;
+  background-color: #7994A7;
+}
+/*The navigation buttons are floated to the right, have a 5px border with curved edges*/
+.mainMenuNavigation, .aboutMeNavigation, .bucketListNavigation, .contactNavigation
+{
+  border: 5px solid ;
+  float: right;
+  color: #F4F4F4;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 30px 15px; /*Curves the border by 30px top left and bottom left and 15px top right and bottom right*/
+}
+/*Gives the navigation link buttons the colour white-grey*/
+.mainMenuNavigation a, .aboutMeNavigation a, .bucketListNavigation a, .contactNavigation a
+{
+  color: #F4F4F4;
+}
+/*Footer spans the whole length of the wrapping div, is 100px high and is given the blue colour*/
+footer
+{
+  height: 100px;
+  width: 100%;
+  background-color: #7994A7;
+}
+/*The name Aaron is put on the left given the white-grey colour and has a margin of 20px*/
+.aaron
+{
+  float: left;
+  margin: 20px;
+  color: #F4F4F4;
+}
+/*Twitter logo is put on the right of the footer and has an opacity of 1. This means that it can be faded when hover overed by the user*/
+.twitterLogo
+{
+  height:60px;
+  width:60px;
+  float:right;
+  margin:20px;
+  opacity:1; /*Can make button fade*/
+}
+/*Steam logo is put on the right of the footer and has an opacity of 1*/
+.steamLogo
+{
+  height:100px;
+  width:200px;
+  float:right;
+  opacity:1;
+}
+/*Due to the opacity being 1 before, when the user hovers over these buttons they will seem faded*/
+.steamLogo:hover, .twitterLogo:hover
+{
+  opacity:0.75;
+}
+
+/* Classes connected to bucketList.html */
+/*Gives the left and middle bucket list items a right and top border along with a height of 300px and a width of 24.9%*/
+.leftBucketItem, .middleBucketItem, .bottomMiddleBucketItem
+{
+  width:24.9%;
+  height:300px;
+  float:left;
+  border-right: 1px solid #7994A7;
+  border-top: 1px solid #7994A7;
+}
+/*Does not need the right border but the same as above*/
+.rightBucketItem
+{
+  width:24.9%;
+  height:300px;
+  float:left;
+  border-top: 1px solid #7994A7;
+}
+/*The image for the bucket list items will fill 80% of the div, has a border top to seperate the title and the image*/
+.image
+{
+  height:80%;
+  width:100%;
+  margin:1px;
+  border-top: 1px solid #7994A7;
+}
+/*Title is allgned in the middle of title section*/
+.title
+{
+  text-align:center;
+  height:19%;
+  width:100%;
+}
+/*If the item has been done on the bucket list then it will have a line through the text*/
+.titleDone
+{
+  text-align:center;
+  text-decoration: line-through;
+  height:19%;
+  width:100%;
+}
+
+/* Id's connected to index.html */
+/*Situated below the navigation bar but above the main content, it spans the whole length of the wrapping div, height is determined by the text size and the margin*/
+#mainMenuHeader
+{
+  width: 98%;
+  margin:20px;
+}
+/*Where the main content for the main menu is stored, spans the whole width of the wrapping and has a pixel thick top border to show variation from the title and the main content*/
+#sampleBanner
+{
+  height: 600px;
+  width: 100%;
+  border-top: 1px solid #7994A7;
+}
+/*The large image on the front page, situated on the left side of the sampleBanner div. Spans 99% of height and half of the width.*/
+#indexImage
+{
+  float: left;
+  width: 49.7%;
+  height:99%;
+  margin:1px;
+}
+/*This is situated on the right side as the left is taken up by the image, it will be flush next to it. Has 100% of the height of the sampleBanner and takes up the remaining width*/
+#indexTextBox
+{
+  float:left;
+  width:49.7%;
+  height:100%;
+}
+/*Text has a small box at the top of indexTextBox that takes up all the width and 300px of height*/
+#indexText
+{
+  float: left;
+  width: 100%;
+  height: 300px;
+}
+/*The last paragraph in Index text gets a bottom border, this means that the border will change depending on how much writing is in the box or the width of the screen*/
+#indexText p:last-child
+{
+  border-bottom: 1px solid #7994A7;
+}
+/*Picture navigation contains the 3 images that can be used as navigation on the main page. Tried to make the images be evenly spaced through margins but it would lead to the images being layed on top of each other. One user online suggested to another they should try flex box as it deals with the spacing automatically even with varying widths.*/
+#pictureNavigation
+{
+  width: 100%;
+  height:300px;
+  margin:0 auto;
+  display:flex;  /*Sets display to flex so flex box is able to be used*/
+  justify-content:space-around;  /*Automatically spaces out the images depending on the amount of space avaliable*/
+}
+/*Each image has a width and height of 200px making each image the same, they have an opacity so they will be able to fade on hover*/
+#aboutMePicture, #contactPicture, #bucketListPicture
+{
+  height: 200px;
+  width: 200px;
+  opacity:1;
+}
+/*When the user hovers over the picture navigation images will fade telling the user they are over a button*/
+#aboutMePicture:hover, #contactPicture:hover, #bucketListPicture:hover
+{
+  opacity:0.75;
+}
+
+/* Id's connected to aboutMe.html */
+/*Header the same as the main menu, keeping each pages CSS seperated so if one menu needs to be tweaked it is all ready to be found easily. Height is determined by the font size and the margin */
+#aboutHeader
+{
+  width: 98%;
+  margin:20px;
+}
+/*Main information for the page is stored in here, has the same width as the wrapping div with a fixed height of 1200px. The border top is to split the main content from the header*/
+#aboutMeContent
+{
+  width: 100%;
+  height: 1200px;
+  border-top: 1px solid #7994A7;
+}
+/*Large div that will contain the skills that I have, spans 60% width and all of the height of the aboutMeContent div so that information can be put on the right. 5px padding so the content is not touching the left side. */
+#aboutMeSkills
+{
+  float: left;
+  width: 60%;
+  height: 99%;
+  padding:5px;
+}
+/*Div that contains all the information about me. Spans the remaining width of the aboutMeContent div and spans all of its height*/
+#aboutMe
+{
+  float: left;
+  width: 39%;
+  height: 99%;
+}
+/*Each little section that will be made that contains information. They will go down in a line on the right side of the page due to the left side being taken up by the skills*/
+#aboutMeBio, #aboutMeCurrentPos, #aboutMeInterests, #aboutMeExperiences, #aboutMeAcademic
+{
+  float: left;
+  width: 99%;
+  height: 20%;
+  border-bottom: 1px solid #7994A7;
+  padding:3px;
+}
+/*Sets all the images of my skills to the same height and width so they can fill the screen equally*/
+#problemSolving, #communication, #teamwork, #publicSpeaking, #organisation, #leadership, #confidence, #perseverance, #criticalThinking
+{
+  height:120px;
+  width: 100%;
+}
+
+/* Id's connected to bucketList.html */
+#bucketHeader
+{
+  width: 98%;
+  margin:20px;
+}
+/*Has a height of 900px to store all the images of the bucket list items*/
+#bucketListContent
+{
+  height:900px;
+  width:100%;
+  border-top: 1px solid #7994A7;
+}
+/*Has the same as the other bucket list items*/
+#bottomLeftBucketItem
+{
+  width:24.9%;
+  height:300px;
+  float:left;
+  border-top: 1px solid #7994A7;
+  border-right: 1px solid #7994A7;
+}
+/*Same as the other right buckt list items*/
+#bottomRightBucketItem
+{
+  width:24.9%;
+  height:300px;
+  float:left;
+  border-top: 1px solid #7994A7;
+}
+
+/* Id's connected to contact.html */
+#contactHeader
+{
+  width: 98%;
+  margin:20px;
+}
+/*Large image that spans the screen which has a height of 800px*/
+#contactImage
+{
+  height:800px;
+  width:100%;
+}
+/*Informationabout how to contact me stored in a small div, the height is determined by the amount of contact information provided and the padding*/
+#contactContent
+{
+  width:97%;
+  padding:20px;
+}
